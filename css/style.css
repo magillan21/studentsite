@@ -1,0 +1,68 @@
+/* ----------------
+-------------------
+-------------------
+CSS TABLE OF CONTENTS
+
+# GLOBAL STYLING
+    # Global Reset
+    # Global Colors
+    # Global Typography
+# LAYOUT
+    # Grid
+# STRUCTURE
+    # HEADER
+    # MAIN SECTIONS
+        # HERO
+    # FOOTER
+
+-------------------
+-------------------
+---------------- */
+
+/* GLOBAL STYLING */
+
+/* Global Resets */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* Global Colors */
+body {
+    /* SET THE BACKGROUND COLOR OF ALL PAGES */ 
+    background-color: #ddd;
+
+    /* SET THE MAIN TEXT COLOR FOR THE SITE*/
+    color: rgb(0 0 0 / .8);
+}
+
+/* SET THE COLOR OF ALL HEADINGS */
+h1, h2, h3 {
+    color: rgb (0 0 0 /1);
+}
+
+/* Global Typography */
+
+/* SET THE MAIN BODY FONT */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Set font size 100% = 1em =  16px */
+    font-size: 100%;
+}
+
+/* SET THE FONT FOR ALL HEADINGS */
+h1, h2, h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* SITE STRUCTURE */
+
+.site-header {
+    background-color: whitesmoke;
+    padding: 1em;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #9f9f9f;
+    padding: 3em 1em;
+    text-align: center;
+}
