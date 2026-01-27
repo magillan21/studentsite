@@ -66,3 +66,9 @@ h1, h2, h3 {
     padding: 3em 1em;
     text-align: center;
 }
+
+.courses {
+    background-color: palegoldenrod;
+    padding: 3em 1em;
+    text-align: center;
+}
