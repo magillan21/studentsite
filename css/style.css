@@ -91,11 +91,23 @@ h1, h2, h3 {
     padding: 1em;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     background-color: #eeeeee;
     padding: 6em 1em;
     text-align: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
 }
 
 /* Courses Section */
