@@ -28,15 +28,18 @@ body { margin: 0; }
 /* Global Colors */
 body {
     /* SET THE BACKGROUND COLOR OF ALL PAGES */ 
-    background-color: #ddd;
+    background-color: #eeeeee;
 
     /* SET THE MAIN TEXT COLOR FOR THE SITE*/
     color: rgb(0 0 0 / .8);
+
+    /* SET THE HOVER COLOR FOR LINKS */
+    a:hover {color: #5998d6}
 }
 
 /* SET THE COLOR OF ALL HEADINGS */
 h1, h2, h3 {
-    color: rgb (0 0 0 /1);
+    color: #980404;
 }
 
 /* Global Typography */
@@ -46,29 +49,35 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* Set font size 100% = 1em =  16px */
     font-size: 100%;
+    line-height: 1.4;
 }
 
 /* SET THE FONT FOR ALL HEADINGS */
 h1, h2, h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* SITE STRUCTURE */
 
+/* HEADER */
 .site-header {
-    background-color: whitesmoke;
+    background-color: #980404;
     padding: 1em;
+}
+
+.site-id h1 {
+    color: white;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #9f9f9f;
+    background-color: #eeeeee;
     padding: 3em 1em;
     text-align: center;
 }
 
 .courses {
-    background-color: palegoldenrod;
+    background-color: #999999;
     padding: 3em 1em;
     text-align: center;
 }
