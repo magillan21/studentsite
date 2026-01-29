@@ -28,7 +28,7 @@ body { margin: 0; }
 /* Global Colors */
 body {
     /* SET THE BACKGROUND COLOR OF ALL PAGES */ 
-    background-color: #eeeeee;
+    background-color: whitesmoke;
 
     /* SET THE MAIN TEXT COLOR FOR THE SITE*/
     color: rgb(0 0 0 / .8);
@@ -97,7 +97,7 @@ h1, h2, h3 {
 /* HERO SECTION */
 .hero {
     background-color: #eeeeee;
-    padding: 6em 1em;
+    padding: 4em 1em;
     text-align: center;
 }
 
@@ -121,6 +121,9 @@ h1, h2, h3 {
     display: grid;
     justify-content: center;
     text-align: center;
+    margin-right: 8em;
+    margin-left: 8em;
+    margin-top: 2em;
 }
 
 .courses h3 {
