@@ -137,6 +137,7 @@ h1, h2, h3 {
 .courses h3 {
     text-align: center;
 }
+
 .courses a {
     color: black;
     text-decoration: none;
@@ -164,6 +165,33 @@ h1, h2, h3 {
 }
 .project {
     margin: 2em;
+}
+
+/* NOTES PAGE LAYOUT */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 3em 1em;
+}
+
+/* SIDEBAR/ASIDE */
+aside {
+    padding: 2em 0;
+}
+
+@media (min-width: 768px) {
+    .two-col-sidebar {
+        display: grid;
+        grid-template-columns: 20em auto;
+    }
+    .two-col-sidebar aside {
+        border-right: 1px solid rgba(0,0,0,0.1);
+        margin: 0 3em 2em 0;
+        padding: .3em 2em 0 0;
+    }
 }
 
 /* FOOTER */
