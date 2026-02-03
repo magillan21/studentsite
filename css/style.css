@@ -123,17 +123,6 @@ h1, h2, h3 {
     margin: 1em auto;
 }
 
-/* SUB-PAGES */
-.page-art128 .hero {
-    background-image: url(../img/hero2.png);
-}
-
-.page-notes .hero {
-    background-image: url(../img/hero3.png);
-}
-
-
-
 /* COURSES SECTION */
 .courses {
     background-color: wheat;
@@ -252,6 +241,43 @@ footer {
 }
 
 .page-home .hero p {
+    color: white;
+    text-shadow: 0 1px 0 whitesmoke;
+    font-size: 130%;
+}
+
+/* CUSTOM SUB-PAGES STYLING */
+.page-art128 .hero {
+    background-image: url(../img/hero2.png);
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px double white;
+}
+
+.page-art128 .hero h2 {
+    color: #980404;
+    text-shadow: 0 2px 0 whitesmoke;
+}
+
+.page-art128 .hero p {
+    color: white;
+    text-shadow: 0 1px 0 whitesmoke;
+    font-size: 130%;
+}
+
+.page-notes .hero {
+    background-image: url(../img/hero3.png);
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px double white;
+}
+
+.page-notes .hero h2 {
+    color: #980404;
+    text-shadow: 0 2px 0 whitesmoke;
+}
+
+.page-notes .hero p {
     color: white;
     text-shadow: 0 1px 0 whitesmoke;
     font-size: 130%;
