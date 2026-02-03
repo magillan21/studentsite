@@ -84,6 +84,19 @@ h1, h2, h3 {
     position: sticky;
     top: 0;
     z-index: 100;
+
+    animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity:0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity:1;
+    }
 }
 
 .site-header a {
@@ -95,9 +108,16 @@ h1, h2, h3 {
 
 .site-id h1 {
     margin: 0;
+    animation: fadeanddropIn 1s ease-out .5s forwards;
+    opacity: 0;
 }
 
 /* SITE NAV */
+.site-nav {
+    animation: fadeanddropIn 1s ease-out .5s forwards;
+    opacity: 0;
+}
+
 .site-nav ul {
     display: flex;
     justify-content: flex-end;
