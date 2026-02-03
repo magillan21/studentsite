@@ -40,7 +40,7 @@ body {
 
 /* SET THE HOVER COLOR FOR LINKS */
 a:hover {
-    color: #5998d6;
+    color:goldenrod;
 }
 
 /* SET THE COLOR OF ALL HEADINGS */
@@ -183,6 +183,7 @@ h1, h2, h3 {
 .container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1em;
 }
 
 section {
@@ -191,18 +192,25 @@ section {
 
 /* SIDEBAR ASIDE */
 aside {
-    padding: 2em 0;
+    padding: 3em 0;
+    background-color: wheat;
+}
+
+aside h3 {
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     .two-col-sidebar {
         display: grid;
-        grid-template-columns: 20em auto;
+        grid-template-columns: 15em 1fr;
+        gap: 2em;
+        max-width: 100%; /* Prevents overflow */
     }
     .two-col-sidebar aside {
-        border-right: 1px solid rgba(0,0,0,0.1);
-        margin: 0 3em 2em 0;
-        padding: .3em 2em 0 0;
+        border: 5px ridge #980404;
+        margin: 0 1em 2em 0;
+        padding: 0.3em 0em 0 0;
     }
 }
 
