@@ -148,6 +148,24 @@ h1, h2, h3 {
     list-style: none;
 }
 
+/* COURSE PAGE WITH MULTIPLE PROJECT LISTS */
+.coursework {
+    padding: 3em 1em;
+}
+
+.coursework h2 {
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project {
+    margin: 2em;
+}
+
 /* FOOTER */
 footer {
     border-top: 1px solid rgba(0,0,0,.05);
