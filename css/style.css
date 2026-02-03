@@ -129,7 +129,7 @@ h1, h2, h3 {
 }
 
 /* COURSES SECTION */
-.courses {
+.courseblock {
     background-color: wheat;
     padding: 6em 1em;
     display: grid;
@@ -142,7 +142,7 @@ h1, h2, h3 {
     border: 10px ridge #980404;
 }
 
-.courses h3 {
+.courses h2 {
     text-align: center;
 }
 
@@ -267,7 +267,6 @@ footer {
 
 .page-home .hero p {
     color: white;
-    text-shadow: 0 1px 0 whitesmoke;
     font-size: 130%;
 }
 
