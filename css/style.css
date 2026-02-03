@@ -1,5 +1,6 @@
 /* Import Font*/
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Eagle+Lake&family=Jacquard+12+Charted&family=Uncial+Antiqua&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Eagle+Lake&family=Jacquard+12+Charted&family=Macondo&family=Uncial+Antiqua&display=swap');
 
 /* ----------------
 -------------------
@@ -51,15 +52,15 @@ h1, h2, h3 {
 
 /* SET THE MAIN BODY FONT */
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Macondo', serif;
     /* Set font size 100% = 1em =  16px */
-    font-size: 100%;
+    font-size: 120%;
     line-height: 1.4;
 }
 
 /* SET THE FONT FOR ALL HEADINGS */
 h1, h2, h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Uncial Antiqua', serif;
 }
 
 /* SITE STRUCTURE */
