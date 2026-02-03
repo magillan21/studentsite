@@ -25,6 +25,10 @@ CSS TABLE OF CONTENTS
 
 /* GLOBAL STYLING */
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Global Resets */
 * { box-sizing: border-box; }
 body { margin: 0; }
