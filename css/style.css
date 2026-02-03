@@ -114,6 +114,12 @@ h1, h2, h3 {
     margin: 1em auto;
 }
 
+/* SUB-PAGES */
+.page-sub .hero {
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.8)
+}
+
 /* COURSES SECTION */
 .courses {
     background-color: #999999;
