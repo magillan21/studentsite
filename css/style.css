@@ -211,7 +211,7 @@ aside h3 {
     .two-col-sidebar aside {
         border: 5px ridge #980404;
         margin: 0em 1em 2em 0;
-        padding: 0.3em 0em 0 0;
+        padding: 0.3em 0 0.5em 0;
         position: sticky;
         top: 1em;
         height: fit-content;
