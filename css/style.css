@@ -249,13 +249,6 @@ footer {
 }
 
 /* CUSTOM HOME PAGE STYLING */
-.page-home header {
-    position: absolute;
-    width: 100%;
-    position: sticky;
-    top: 0;
-}
-
 .page-home .hero {
     background-image: url(../img/hero.png);
     background-position: center;
