@@ -118,7 +118,7 @@ h1, h2, h3 {
 }
 
 .hero p {
-    font-size: 1em;
+    font-size: clamp(2em,4vw,4em);
     max-width: 30em;
     margin: 1em auto;
     text-wrap: balance;
