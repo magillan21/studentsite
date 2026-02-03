@@ -32,9 +32,11 @@ body {
 
     /* SET THE MAIN TEXT COLOR FOR THE SITE*/
     color: rgb(0 0 0 / .8);
+}
 
-    /* SET THE HOVER COLOR FOR LINKS */
-    a:hover {color: #5998d6}
+/* SET THE HOVER COLOR FOR LINKS */
+a:hover {
+    color: #5998d6;
 }
 
 /* SET THE COLOR OF ALL HEADINGS */
