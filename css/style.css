@@ -68,6 +68,9 @@ h1, h2, h3 {
 /* HEADER */
 .site-header {
     background-image: url('../img/header-image.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10em 1em 6em 1em;
     color: white;
     padding: 1em;
     display: grid;
