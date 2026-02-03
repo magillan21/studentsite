@@ -68,14 +68,14 @@ h1, h2, h3 {
 /* HEADER */
 .site-header {
     background-image: url('../img/header-image3.jpg');
-    background-position: center;
-    background-size: cover;
+    filter: saturate(1.2);
     padding: 10em 1em 6em 1em;
     color: white;
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    border-bottom: 5px double white;
 }
 
 .site-header a {
@@ -124,14 +124,19 @@ h1, h2, h3 {
 }
 
 /* SUB-PAGES */
-.page-sub .hero {
-    background-color: rgba(0,0,0,0.1);
-    color: rgba(0,0,0,0.8)
+.page-art128 .hero {
+    background-image: url(../img/hero2.png);
 }
+
+.page-notes .hero {
+    background-image: url(../img/hero3.png);
+}
+
+
 
 /* COURSES SECTION */
 .courses {
-    background-color: rgb(111, 144, 227);
+    background-color: wheat;
     padding: 6em 1em;
     display: grid;
     justify-content: center;
@@ -140,6 +145,7 @@ h1, h2, h3 {
     margin-left: 8em;
     margin-top: 4em;
     margin-bottom: 4em;
+    border: 10px ridge #980404;
 }
 
 .courses h3 {
@@ -204,7 +210,7 @@ aside {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 5px double white;
     padding: 1em;
     background-color: #980404;
 }
@@ -237,6 +243,7 @@ footer {
     background-position: center;
     background-size: cover;
     padding: 10em 1em 6em 1em;
+    border-bottom: 5px double white;
 }
 
 .page-home .hero h2 {
@@ -247,7 +254,7 @@ footer {
 .page-home .hero p {
     color: white;
     text-shadow: 0 1px 0 whitesmoke;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 /* FOR DEV PURPOSES */
