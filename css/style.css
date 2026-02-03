@@ -325,7 +325,29 @@ footer {
   }
 }
 
+.fadeandriseIn {
+    animation: fadeandriseIn 1s ease-out .25s forwards;
+    opacity: 0;
+}
 
+.fadeandriseIn * {
+  animation: fadeandriseIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.fadeandriseIn *:nth-child(1) { animation-delay: .25s;}
+.fadeandriseIn *:nth-child(2) { animation-delay: .5s; } 
+
+@keyframes fadeandriseIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;  
+    }
+    100% {
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+}
 /* FOR DEV PURPOSES */
 /* body * {
     background-color: rgba(0,0,0,.05) !important;
