@@ -133,7 +133,7 @@ h1, h2, h3 {
 
 /* HERO SECTION */
 .hero {
-    background-color: #eeeeee;
+    background-color: transparent;
     padding: 4em 1em;
     text-align: center;
 }
@@ -276,15 +276,27 @@ footer {
     background-size: cover;
     padding: 10em 1em 6em 1em;
     border-bottom: 5px double white;
+    isolation: isolate;
+    background-attachment: fixed;
+    margin-top: -8em; 
+    padding-top: 18em;
 }
 
 .page-home .hero h2 {
     color: #980404;
-    text-shadow: 0 2px 0 whitesmoke;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        -1px -1px 2px rgba(146, 18, 18, 0.8),
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
+    font-size: 6em;
 }
 
 .page-home .hero p {
-    color: white;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        -1px -1px 2px aliceblue,
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
     font-size: 130%;
 }
 
@@ -294,16 +306,26 @@ footer {
     background-position: center;
     background-size: cover;
     border-bottom: 5px double white;
+    background-attachment: fixed;
+    margin-top: -8em;
+    padding-top: 18em;
 }
 
 .page-art128 .hero h2 {
     color: #980404;
-    text-shadow: 0 2px 0 whitesmoke;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        -1px -1px 2px rgba(146, 18, 18, 0.8),
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
+    font-size: 5em;
 }
 
 .page-art128 .hero p {
-    color: white;
-    text-shadow: 0 1px 0 whitesmoke;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        -1px -1px 2px aliceblue,
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
     font-size: 130%;
 }
 
@@ -312,16 +334,26 @@ footer {
     background-position: center;
     background-size: cover;
     border-bottom: 5px double white;
+    background-attachment: fixed;
+    margin-top: -6em;
+    padding-top: 16em;
 }
 
 .page-notes .hero h2 {
     color: #980404;
-    text-shadow: 0 2px 0 whitesmoke;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        -1px -1px 2px rgba(146, 18, 18, 0.8),
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
+    font-size: 5em;
 }
 
 .page-notes .hero p {
-    color: white;
-    text-shadow: 0 1px 0 whitesmoke;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        -1px -1px 2px aliceblue,
+        2px 2px 3px rgba(0, 0, 0, 0.9); 
     font-size: 130%;
 }
 
@@ -368,6 +400,28 @@ footer {
         opacity: 1; 
     } 
 }
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+.fade-out {
+    animation: fade-out linear;
+    animation-timeline: scroll();
+}
+
+.fade-out
+.fade-out *:nth-child(1) { animation-delay: .25s;}
+.fade-out *:nth-child(2) { animation-delay: .5s; } 
+
+
 /* FOR DEV PURPOSES */
 /* body * {
     background-color: rgba(0,0,0,.05) !important;
