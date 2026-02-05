@@ -358,6 +358,8 @@ footer {
 }
 
 /* ANIMATIONS */
+
+/* Fade & Downward Motion */
 .fadeanddropIn * {
   animation: fadeanddropIn 1s ease-out 1s forwards;
   opacity: 0;
@@ -377,6 +379,7 @@ footer {
   }
 }
 
+/* Fade & Upward Motion */
 .fadeandriseIn {
     animation: fadeandriseIn 1s ease-out .25s forwards;
     opacity: 0;
@@ -401,6 +404,15 @@ footer {
     } 
 }
 
+/* Fade & Shrink */
+.fade-out {
+    animation: fade-out linear;
+    animation-timeline: scroll();
+}
+
+.fade-out *:nth-child(1) { animation-delay: .25s;}
+.fade-out *:nth-child(2) { animation-delay: .5s; } 
+
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -411,16 +423,6 @@ footer {
         scale: 0.5;
     }
 }
-
-.fade-out {
-    animation: fade-out linear;
-    animation-timeline: scroll();
-}
-
-.fade-out
-.fade-out *:nth-child(1) { animation-delay: .25s;}
-.fade-out *:nth-child(2) { animation-delay: .5s; } 
-
 
 /* FOR DEV PURPOSES */
 /* body * {
