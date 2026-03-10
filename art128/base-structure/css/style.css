@@ -170,6 +170,14 @@ p.text-centered,
   margin-inline: auto;
 }
 
+/* DECREASE HEADING TOP MARGIN WHEN FOLLOWING AN IMAGE */
+img + h1,
+img +h2,
+img +h3 {
+  margin-block-start: 0.25em;
+}
+
+
 /* ----- #MEDIA (Images, Videos, etc) -----  */
 /* #IMAGES - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
 img {
@@ -412,6 +420,7 @@ body {
 
 .site-footer {
   background-color: antiquewhite;
+  padding: 4em 0;
 
   img + h2 {
     margin-block-start: 0.25em;
@@ -430,4 +439,19 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-block-end: 2em;
+}
+
+/* SECTIONS */
+section {
+  padding-block: 4em;
+}
+
+.hero {
+  padding-inline: 1em;
+  text-align: center;
+  
+  p {
+    margin-inline: auto;
+  }
 }
