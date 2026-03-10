@@ -407,10 +407,27 @@ body {
   background-color: aliceblue;
 }
 
+
+/* FOOTER */
+
 .site-footer {
   background-color: antiquewhite;
 
   img + h2 {
     margin-block-start: 0.25em;
   }
+
+  h3 {
+    padding-block-start: 110px;
+  }
+
+  .row {
+    align-items: end;
+  }
+}
+
+.footer-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
