@@ -361,7 +361,6 @@ body {
 
 /* SITE HEADER */
 .site-header {
-  background-color: #e0fac5;
   padding: 1em;
   text-align: center;
 
@@ -412,14 +411,14 @@ body {
 }
 
 .site-main {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 
 /* FOOTER */
 
 .site-footer {
-  background-color: antiquewhite;
+  background-color: rgb(0 0 0 / 0.05);
   padding: 4em 0;
 
   img + h2 {
@@ -435,7 +434,7 @@ body {
   }
 }
 
-.footer-navigation ul {
+.footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -450,6 +449,7 @@ section {
 .hero {
   padding-inline: 1em;
   text-align: center;
+  background-color: lightgrey;
   
   p {
     margin-inline: auto;
