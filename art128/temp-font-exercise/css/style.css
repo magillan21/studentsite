@@ -43,8 +43,8 @@
   --color-links: #003366;
   --color-links-hover: #000033;
   /* BASE TYPOGRAPHY */
-  --font-body: system-ui, Helvetica, Arial, sans-serif;
-  --font-headings: system-ui, Helvetica, Arial, sans-serif;
+  --font-body: "Urbanist", system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: "Reem Kufi", system-ui, Helvetica, Arial, sans-serif;
 }
 
 /* GLOBAL RESETS */
