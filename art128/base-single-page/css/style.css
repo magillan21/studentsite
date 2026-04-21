@@ -28,8 +28,9 @@
                 # toggle-nav (Default for Small Screens)
             #FOOTER
             #SECTIONS
+              #...
             #SUB PAGES
-                #...
+              #...
 --------------------------------- */
 /* ----------------------------- */
 /* ----- GLOBAL STYLING -------- */
@@ -528,4 +529,8 @@ section {
   }
 }
 
-.toggle-nav 
+/* SUB-SECTION STYLING */
+
+body * {
+  border: 1px solid red;
+}

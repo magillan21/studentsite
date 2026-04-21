@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Base | Structure</title>
+  <title>Site Base | Single Page Site</title>
   <meta name="description" content="SiteBase2: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
@@ -24,10 +24,10 @@
         <span>Menu</span>
       </button>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
 
@@ -43,64 +43,115 @@
 
     </section>
 
-    <section>
+    <section id="about">
+      <div class="container"> 
 
-      <div class="container">
+        <h2>About Us</h2>
 
         <div class="row">
-
-          <div class="one-third">
-
-            <img src="img/placeholder-1200x1200.svg" alt="placeholder" width="1200" height="1200">
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit non pariatur dolore ducimus ullam est illo possimus, laboriosam omnis voluptas aspernatur libero, reprehenderit nesciunt officiis qui dolorem voluptatem ad sapiente!</p>
-            <a href="#" class="button">Button</a>
-
+          <div class="one-half">
+            <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+            width="1000" height="1000">
           </div>
-
-          <div class="one-third">
-
-            <img src="img/placeholder-1200x1200.svg" alt="placeholder" width="1200" height="1200">
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit non pariatur dolore ducimus ullam est illo possimus, laboriosam omnis voluptas aspernatur libero, reprehenderit nesciunt officiis qui dolorem voluptatem ad sapiente!</p>
-            <a href="#" class="button">Button</a>
-
+          <div class="one-half">
+            <h3>Our Mission</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat laudantium rem alias unde cupiditate accusamus facilis quas est, nam vel eius totam dolor aspernatur quo libero consectetur veritatis, possimus consequatur.</p>
           </div>
-
-          <div class="one-third">
-
-            <img src="img/placeholder-1200x1200.svg" alt="placeholder" width="1200" height="1200">
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit non pariatur dolore ducimus ullam est illo possimus, laboriosam omnis voluptas aspernatur libero, reprehenderit nesciunt officiis qui dolorem voluptatem ad sapiente!</p>
-            <a href="#" class="button">Button</a>
-
-          </div>
-
         </div>
 
       </div>
-
     </section>
 
-    <section>
+    <section id="service">
       <div class="container">
+
+        <h2>Our Services</h2>
 
         <div class="row">
 
           <div class="one-half">
-            <img src="img/placeholder-1200x1200.svg" alt="" width="1200" height="1200">
+            <div class="row">
+              <div class="one-third">
+                <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+                width="300" height="300">
+              </div>
+              <div class="two-thirds">
+                <h3>Service Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic ipsam nesciunt!</p>
+              </div>
+            </div>
           </div>
 
           <div class="one-half">
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus placeat non, exercitationem optio facilis aut assumenda eaque enim modi consequuntur iste eligendi ipsam, perspiciatis aspernatur velit repellendus quo provident rem.</p>
+            <div class="row">
+              <div class="one-third">
+                <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+                width="300" height="300">
+              </div>
+              <div class="two-thirds">
+                <h3>Service Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic ipsam nesciunt!</p>
+              </div>
+            </div>
+          </div>
 
+        </div>
+
+        <div class="row">
+
+          <div class="one-half">
+            <div class="row">
+              <div class="one-third">
+                <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+                width="300" height="300">
+              </div>
+              <div class="two-thirds">
+                <h3>Service Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic ipsam nesciunt!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="one-half">
+            <div class="row">
+              <div class="one-third">
+                <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+                width="300" height="300">
+              </div>
+              <div class="two-thirds">
+                <h3>Service Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic ipsam nesciunt!</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
       </div>
+    </section>
 
+    <section id="contact">
+      <div class="container">
+
+        <h2>Contact Us</h2>
+
+        <div class="row">
+          <div class="one-third">
+
+            <h3>Our Address</h3>
+            <address>
+              4303 Diamond Head Road<br>
+              Honolulu, HI 96815
+            </address>
+
+          </div>
+          <div class="two-thirds">
+            <img src="img/placeholder-1x1.jpg" alt="Placeholder Image"
+            width="1500" height="1500">
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </main>
@@ -119,10 +170,10 @@
           <h3>Pages</h3>
           <div class="footer-nav">
             <ul>
-              <li><a href="#">Lorem</a></li>
-              <li><a href="#">Ipsum</a></li>
-              <li><a href="#">Dolor</a></li>
-              <li><a href="#">Contactus</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
         </div>
