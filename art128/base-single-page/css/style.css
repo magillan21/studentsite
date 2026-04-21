@@ -530,7 +530,27 @@ section {
 }
 
 /* SUB-SECTION STYLING */
+.subsection-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
 
-body * {
-  border: 1px solid red;
+}
+
+.subsection-title::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #ccc;
+  width: 50px;
+  margin-inline: auto;
+  margin-block: 1em 3em;
+}
+
+/* SERVICES SECTION STYLING */
+
+@media (width <768px ) {
+  #services .row .row>*:last child {
+    margin-block-end: 4em;
+  }
 }
