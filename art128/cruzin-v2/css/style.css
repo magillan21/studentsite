@@ -1,0 +1,702 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=Reem+Kufi+Fun:wght@400..700&family=Reem+Kufi:wght@400..700&family=Sue+Ellen+Francisco&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-logo (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+              #...
+            #SUB PAGES
+              #...
+--------------------------------- */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* ----- SET GLOBAL VARIABLES ----- */
+:root {
+  /* BRAND COLORS */
+  --cruzin-blue: #D2ECEA;
+  --cruzin-red: #e35555;
+  --cruzin-beige: #FFF8EF;
+  /* BASE COLORS */
+  --color-body-background: var(--cruzin-beige);
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: var(--cruzin-red);
+  --color-links: var(--cruzin-red);
+  --color-links-hover: salmon;
+  /* BASE TYPOGRAPHY */
+  --font-body: urbanist, system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: reem kufi, system-ui, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body {
+  margin: 0;
+}
+
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+}
+a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+  color: var(--color-links-hover);
+}
+
+/* ----- SET GLOBAL TYPOGRAPHY ----- */
+/* # GLOBAL BODY FONT SETTINGS */
+body {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
+  /* 100% = 16px */
+  font-size: 100%;
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+}
+
+/* # GLOBAL HEADING SETTINGS */
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
+  margin: 1em 0 0.25em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
+}
+
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
+h1 {
+  /* 48px / 16px = 3em */
+  font-size: 3em;
+  line-height: 1;
+}
+
+h2 {
+  /* 36px / 16px = 2.25em */
+  font-size: 2.25em;
+  line-height: 1.1;
+}
+
+h3 {
+  /* 24px / 16px = 1.5em */
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+h4 {
+  /* 21px / 16px = 1.3125em */
+  font-size: 1.3125em;
+  line-height: 1.3;
+}
+
+h5 {
+  /* 18px / 16px = 1.125em */
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+
+h6 {
+  /* 16px / 16px = 1em */
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* # GLOBAL PARAGRAPH SETTINGS */
+p {
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
+  margin: 0.5em 0;
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+  /* WIDOW FIXER */
+  text-wrap: pretty;
+}
+
+/* TEXT CENTERING HELPER CLASS */
+.text-centered {
+  text-align: center;
+}
+
+/* CENTER PARAGRAPHS WITH THE TEXT-CENTERED CLASS */
+p.text-centered,
+.text-centered p {
+  margin-inline: auto;
+}
+
+/* DECREASE HEADING TOP MARGIN WHEN FOLLOWING AN IMAGE */
+img + h1,
+img +h2,
+img +h3 {
+  margin-block-start: 0.25em;
+}
+
+
+/* ----- #MEDIA (Images, Videos, etc) -----  */
+/* #IMAGES - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* #VIDEO - MAKE ALL IMAGES RESPONSIVE BY DEFAULT */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- #COMPONENTS -----  */
+/* #BUTTONS */
+button,
+a.button {
+  display: inline-block;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
+  color: white;
+  padding: 0.75em 1em;
+  border-radius: 0.32em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+
+button.alt,
+a.button.alt {
+  background-color: transparent;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
+}
+
+button:hover,
+a.button:hover {
+  background-color: var(--color-links-hover);
+  color: #fff;
+  border-color: var(--color-links-hover);
+  text-decoration: none;
+}
+
+/* SITE-WIDE CONTAINER */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
+body {
+  font-size: 87.5%;
+}
+
+/* MIDSIZE / LAPTOP SCREENS = 16px */
+@media (min-width: 1050px) {
+  body {
+    font-size: 100%;
+  }
+}
+/* LARGE / DESKTOP SCREENS = 18px */
+@media (min-width: 1250px) {
+  body {
+    font-size: 112.5%;
+  }
+}
+/* SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  /* SET THE GAP BETWEEN COLUMNS */
+  --gridgap: 4%;
+}
+
+.row > * {
+  margin-bottom: var(--gridgap);
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    gap: var(--gridgap);
+  }
+
+  .row > .one-whole {
+    min-width: 100%;
+  }
+
+  .row > .one-half {
+    min-width: calc(50% - var(--gridgap) / 2);
+  }
+
+  .row > .one-fourth {
+    min-width: calc(25% - var(--gridgap) / 1.333);
+  }
+
+  .row > .one-third {
+    min-width: calc(33.3333% - var(--gridgap) / 1.5);
+  }
+
+  .row > .two-thirds {
+    min-width: calc(66.6666% - var(--gridgap) / 3);
+  }
+
+  .row > .three-fourths {
+    min-width: calc(75% - var(--gridgap) / 4);
+  }
+
+  /* ADD SUPPORT FOR SIMPLE ROWS WITH AUTO CHILDREN COLUMNS   */
+  .row > * {
+    flex-grow: 1;
+  }
+
+  /* CENTERED HELPER CLASS  */
+  .row > .centered {
+    margin-inline: auto;
+    flex-grow: 0;
+  }
+}
+/* FOR DEMO PURPOSES ONLY */
+.demo .row > * {
+  padding: 1em;
+  background: rgba(204, 204, 204, 0.7);
+  color: rgba(51, 51, 51, 0.7);
+  text-align: center;
+}
+
+.demo .row > * p {
+  margin: 0;
+  padding: 0 0.5em;
+  max-width: none;
+}
+
+.demo {
+  padding: 2em 0;
+}
+
+
+
+.demo:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  content: "Small (less than 768px)";
+  color: #fff;
+  background: #993333;
+}
+
+@media (min-width: 768px) {
+  body.demo:after {
+    content: "Medium (768px - 1049px)";
+    background: #bcb83d;
+  }
+}
+@media (min-width: 1050px) {
+  body.demo:after {
+    content: "Large (1050px - 1249px)";
+    background: #669933;
+  }
+}
+@media (min-width: 1250px) {
+  body.demo:after {
+    content: "Extra Large (1250px +)";
+    background: #0099cc;
+  }
+}
+.demo .column p:last-child {
+  margin-bottom: 0;
+}
+
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
+
+/* SITE HEADER */
+.site-header {
+  padding: 1em;
+  text-align: center;
+
+  @media (width >= 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }  
+
+  /* SITE LOGO */
+  .site-logo {
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.4;
+      font-family: asset;
+      
+      a {
+        text-decoration: none;
+        padding: 0.5em 0;
+        display: block;
+        color: var(--cruzin-red);
+      }
+
+      a:hover {
+        color: var(--color-links-hover);
+      }
+    }
+  } 
+
+  /* SITE NAV */
+  .site-nav {
+    font-family: var(--font-headings);
+    font-weight: 800;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      @media (width >= 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0.5em;
+      display: block;
+    }
+  }
+
+}
+
+.site-main {
+  /* background-color: aliceblue; */
+}
+
+
+/* FOOTER */
+
+.site-footer {
+  padding: 1em;
+  text-align: center;
+  background-color: var(--cruzin-blue);
+
+  @media (width >= 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }  
+
+    /* SITE LOGO */
+  .site-logo {
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.4;
+      font-family: asset;
+      
+      a {
+        text-decoration: none;
+        padding: 0.5em 0;
+        display: block;
+        color: var(--cruzin-red);
+      }
+
+      a:hover {
+        color: var(--color-links-hover);
+      }
+    }
+  } 
+
+
+  /* SITE NAV */
+  .site-nav {
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      @media (width >= 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0.5em;
+      display: block;
+      color: var(--cruzin-red);
+    }
+  }
+
+  a:hover {
+    color: var(--color-links-hover);
+  }
+}
+
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-block-end: 2em;
+}
+
+/* SECTIONS */
+section {
+  padding-block: 4em;
+}
+
+.hero {
+  padding-inline: 1em;
+  text-align: center;
+  background-color: lightgrey;
+  
+  p {
+    margin-inline: auto;
+  }
+
+  ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+}
+
+/* TOGGLE NAV */
+.menu-button {
+  display: none;
+}
+
+@media (width < 768px) {
+.toggle-nav {
+  /* background-color: palegoldenrod; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  /* justify-content: space-between; */
+
+  .site-logo {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .site-nav {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+
+    ul {
+      text-align: center;
+      overflow: hidden;
+      transition: all 1s ease-out;
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+
+    &[data-nav-state="closed"] ul {
+      max-height: 0;
+    }
+
+    &[data-nav-state="open"] ul {
+      max-height: 40svh;
+    }
+  }
+
+  .menu-button {
+    background-color: transparent;
+    border: 1px solid var(--color-text-headings);
+    color: var(--color-text-headings);
+    padding: 0.5em;
+    margin: 0;
+    font-size: 1em;
+    display: inline-block;
+  }
+}
+
+}
+
+/* BURGER */
+
+.menu-button.burger {
+  padding: 0;
+  border: none;
+  font-size: 2em;
+
+  span {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+  }
+  &::after {
+    content: "=";
+  }
+}
+
+/* SUB-SECTION STYLING */
+.subsection-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+.subsection-title::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #ccc;
+  width: 50px;
+  margin-inline: auto;
+  margin-block: 1em 3em;
+}
+
+/* SERVICES SECTION STYLING */
+
+@media (width <768px ) {
+  #services .row .row>*:last child {
+    margin-block-end: 4em;
+  }
+}
+
+/* RECIPES SECTION STYLING */
+#recipes {
+  padding-inline: 1em;
+  text-align: center;
+  background-color: var(--cruzin-blue);
+
+  ul {
+    font-family: sue ellen francisco;
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+}
+
+/* DESTINATION SECTION STYLING */
+.destination {
+  ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+}
+
+/* SKILL SECTION STYLING */
+.skill {
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    width: fit-content;
+    margin-inline: auto;
+  }
+}
+
+/* INGREDIENTS SECTION STYLING  */
+.ingredients {
+  background-color: var(--cruzin-blue);
+
+  ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+}
+
+/* FIND YOUR RECIPE SECTION STYLING */
+.find {
+  h3 {
+    text-align: center;
+  }
+}
+
+/* ABOUT US SECTION STYLING */
+#about {
+  p {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+/* SUBMISSIONS SECTION STYLING */
+#submissions {
+  p {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
