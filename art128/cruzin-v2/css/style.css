@@ -371,6 +371,7 @@ body {
 .site-header {
   padding: 1em;
   text-align: center;
+  border-bottom: 5px double var(--cruzin-red);
 
   @media (width >= 768px) {
     display: flex;
