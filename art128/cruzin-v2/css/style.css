@@ -606,8 +606,7 @@ section {
 
 /* SUB-SECTION STYLING */
 .subsection-title {
-  font-size: 1em;
-  text-transform: uppercase;
+  font-size: 1.5em;
   letter-spacing: .1em;
   text-align: center;
 }
@@ -634,6 +633,7 @@ section {
   padding-inline: 1em;
   text-align: center;
   background-color: var(--cruzin-blue);
+  padding-bottom: 8em;
   mask: 
     linear-gradient(0,#0000 30px,#000 0),
     radial-gradient(30px,#000 calc(100% - 1px),#0000) bottom/55.5px 60px;
@@ -662,7 +662,7 @@ section {
 }
 
 .recipe-card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
   background-color: white;
   max-width: 400px;
   padding: 1em;
