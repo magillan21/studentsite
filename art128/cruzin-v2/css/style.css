@@ -634,6 +634,14 @@ section {
   padding-inline: 1em;
   text-align: center;
   background-color: var(--cruzin-blue);
+  mask: 
+    linear-gradient(0,#0000 30px,#000 0),
+    radial-gradient(30px,#000 calc(100% - 1px),#0000) bottom/55.5px 60px;
+
+
+  h1 {
+    padding-bottom: 1em;
+  }
 
   ul {
     font-family: sue ellen francisco;
