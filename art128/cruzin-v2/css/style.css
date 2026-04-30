@@ -377,10 +377,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }  
 
   /* SITE LOGO */
   .site-logo {
+    img {
+      width: 70px;
+      height: auto;
+    }
 
     h1 {
       margin: 0;
@@ -391,8 +396,9 @@ body {
       a {
         text-decoration: none;
         padding: 0.5em 0;
-        display: block;
+        display: flex;
         color: var(--cruzin-red);
+        align-items: center;
       }
 
       a:hover {
@@ -582,7 +588,6 @@ section {
 }
 
 /* BURGER */
-
 .menu-button.burger {
   padding: 0;
   border: none;
@@ -638,6 +643,38 @@ section {
     width: fit-content;
     padding: 0;
     margin-inline: auto;
+  }
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.recipe-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  max-width: 400px;
+  padding: 1em;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+}
+
+.recipe-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.recipe-description {
+  h3 {
+    font-family: sue ellen francisco;
+    color: black;
+    font-weight: 100px;
   }
 }
 
