@@ -614,7 +614,6 @@ section {
 .subsection-title::after {
   content: "";
   display: block;
-  border-bottom: 5px solid #ccc;
   width: 50px;
   margin-inline: auto;
   margin-block: 1em 3em;
@@ -688,6 +687,24 @@ section {
 
 /* DESTINATION SECTION STYLING */
 .destination {
+  .row {
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .one-third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+  }
+
+  .one-third img {
+    width: 240px;
+    height: auto;
+  }
+
   ul {
     list-style: none;
     text-align: left;
@@ -700,8 +717,31 @@ section {
 
 /* SKILL SECTION STYLING */
 .skill {
-  h3 {
+  background-image: url('../img/cloud_background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-block: 6em;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+ 
+  h2 {
+    color: var(--cruzin-red);
     text-align: center;
+  }
+ 
+  .airplane {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 750px;
+    z-index: 1;
   }
 
   form {
@@ -713,6 +753,10 @@ section {
 /* INGREDIENTS SECTION STYLING  */
 .ingredients {
   background-color: var(--cruzin-blue);
+
+  img {
+    max-width: 250px;
+  }
 
   ul {
     list-style: none;
@@ -733,16 +777,116 @@ section {
 
 /* ABOUT US SECTION STYLING */
 #about {
-  p {
-    text-align: center;
-    margin-inline: auto;
+  .about-card {
+    background-color: #DEE5F1;
+    padding: 2em;
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
   }
+  
+  .subsection-title {
+    text-align: left;
+  }
+  
+  .subsection-title::after {
+    margin-inline: 0;
+  }
+
+  img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+  }
+
+  p {
+    text-align: left;
+    margin-inline: auto;
+    font-size: 0.9em;
+  }
+
+    .about-socials {
+    display: flex;
+    justify-content: center;
+    padding-top:1.5em;
+    margin-top: 1.5em;
+  }
+
+  a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--cruzin-red);
+      color: white;
+      text-decoration: none;
+      font-size: 0.75em;
+      font-weight: 700;
+    }
+ 
+    a:hover {
+      background-color: var(--color-links-hover);
+      color: white;
+    }
 }
 
 /* SUBMISSIONS SECTION STYLING */
 #submissions {
-  p {
+  .submissions-card {
+    background-color: #FCE8EF;
+    padding: 2em;
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+  }
+ 
+  .submissions-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+ 
+  .submissions-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+ 
+  .subsection-title {
+    text-align: center;
+  }
+ 
+  .subsection-title::after {
     margin-inline: auto;
+  }
+ 
+  .button {
+    background-color: #99C17F;
+    border-color: #99C17F;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    width: 80%;
+    border-radius: 12px;
+  }
+ 
+  .button:hover {
+    background-color: #c2eaa8;
+    border-color: #c2eaa8;
+  }
+ 
+  h3 {
+    color: white;
+  }
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    max-width: 250px;
+    flex-shrink: 0;
+    margin-right: -4em;
   }
 }
