@@ -644,9 +644,16 @@ section {
     linear-gradient(0,#0000 30px,#000 0),
     radial-gradient(30px,#000 calc(100% - 1px),#0000) bottom/55.5px 60px;
 
+  .row {
+    @media (width < 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   h1 {
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
   }
 
   ul {
@@ -660,12 +667,12 @@ section {
   }
 }
 
-.recipe-grid {
+/* .recipe-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   padding: 1em;
-}
+} */
 
 .recipe-card {
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
@@ -682,13 +689,14 @@ section {
 
 .recipe-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05); 
 }
 
 .recipe-description {
   h3 {
     font-family: sue ellen francisco;
     color: black;
-    font-weight: 100px;
+    font-weight: 700;
   }
 }
 
@@ -700,16 +708,31 @@ section {
     gap: 0;
   }
 
+  .row > .one-third {
+    min-width: 0;
+  }
+
+  .subsection-title {
+    padding: 2em;
+  }
+
   .one-third {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 0;
+    margin: 0;
   }
 
-  .one-third img {
+  img {
     width: 240px;
     height: auto;
+  }
+
+  a:hover {
+    img {
+      transform: scale(1.05); 
+    }
   }
 
   ul {
@@ -728,26 +751,50 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-block: 6em;
+  margin-top: 5em;
+
+  padding: 5em 0 15em 0;
+
+  @media (min-width: 860px) {
+    padding-bottom: 25em;
+  }
+
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
 
   .container {
     position: relative;
     z-index: 2;
   }
- 
+
   h2 {
-    color: var(--cruzin-red);
-    text-align: center;
+    color: var(--cruzin-beige);
+    margin: 0;
+    text-align: left;
   }
- 
+
+  .subsection-title {
+    text-align: left;
+    margin: 0;
+  }
+
+  .subsection-title::after {
+    margin-inline: 0;
+  }
+
   .airplane {
     position: absolute;
     top: 50%;
-    left: -5%;
+    left: -10%;
     transform: translateY(-50%);
-    width: 80%;
-    max-width: 750px;
+    width: 100%;
     z-index: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill .airplane {
+    width: 85%;
+    left: -5%;
   }
 
   form {
@@ -759,6 +806,7 @@ section {
 /* INGREDIENTS SECTION STYLING  */
 .ingredients {
   background-color: var(--cruzin-blue);
+  margin-top: 10em;
 
   img {
     max-width: 250px;
