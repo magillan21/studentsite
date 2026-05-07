@@ -637,7 +637,6 @@ section {
 /* RECIPES SECTION STYLING */
 #recipes {
   padding-inline: 1em;
-  text-align: center;
   background-color: var(--cruzin-blue);
   padding-bottom: 8em;
   mask: 
@@ -654,25 +653,13 @@ section {
 
   h1 {
     padding-bottom: 1.5em;
+    text-align: center;
   }
 
-  ul {
-    font-family: sue ellen francisco;
-    list-style: none;
-    text-align: left;
-    margin: 0;
-    width: fit-content;
-    padding: 0;
-    margin-inline: auto;
+  .material-icons {
+    color: var(--cruzin-red);
   }
 }
-
-/* .recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-  padding: 1em;
-} */
 
 .recipe-card {
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
@@ -693,10 +680,54 @@ section {
 }
 
 .recipe-description {
+  margin: 0 0 0 1em;
+
   h3 {
     font-family: sue ellen francisco;
     color: black;
     font-weight: 700;
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
+
+  .recipe-country {
+    display: inline-block;
+    background-color: var(--color-links);
+    border: 1px solid var(--color-links);
+    color: white;
+    padding: 0em 1em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: reem kufi;
+    line-height: 1;
+  }
+}
+
+.recipe-description {
+  margin-left: 1em;
+}
+
+.recipe-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.comment-count {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+
+  p {
+    margin: 0;
+    font-size: 0.9em;
+    font-family: reem kufi;
+    color: var(--cruzin-red)
   }
 }
 
