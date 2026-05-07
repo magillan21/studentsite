@@ -826,6 +826,15 @@ section {
     margin: 0 0;
   }
 
+  .about-image {
+    display: flex;
+    align-items: center;
+
+    @media (width < 768px) {
+      justify-content: center;
+    }
+  }
+
   img {
     border-radius: 50%;
     aspect-ratio: 1;
@@ -852,6 +861,18 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (width < 768px) {
+      h2 {
+        padding-top: 1em;
+        text-align: center;
+      }
+      
+      p {
+        padding: 1em 1em 0 1em;
+        text-align: center;
+      }
+    }
   }
 
   a {
@@ -915,6 +936,10 @@ section {
   .submissions-image {
     display: flex;
     align-items: center;
+
+    @media (width < 768px) {
+      padding-top: 2em;
+    }
   }
  
   @media (width < 768px) {
