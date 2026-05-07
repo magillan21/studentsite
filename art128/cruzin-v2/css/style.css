@@ -240,6 +240,12 @@ a.button:hover {
   padding-inline: 1em;
 }
 
+.container-narrow {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 1em;
+}
+
 /* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
 /* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
 body {
@@ -607,7 +613,8 @@ section {
 /* SUB-SECTION STYLING */
 .subsection-title {
   font-size: 1.5em;
-  letter-spacing: .1em;
+  font-weight: 500;
+  letter-spacing: 0;
   text-align: center;
 }
 
@@ -616,7 +623,7 @@ section {
   display: block;
   width: 50px;
   margin-inline: auto;
-  margin-block: 1em 3em;
+  /* margin-block: 1em 3em; */
 }
 
 /* SERVICES SECTION STYLING */
@@ -722,7 +729,6 @@ section {
   background-position: center;
   position: relative;
   padding-block: 6em;
-  overflow: hidden;
 
   .container {
     position: relative;
@@ -775,41 +781,77 @@ section {
   }
 }
 
+/* FIND YOUR RECIPE SECTION STYLING */
+.find {
+  h3 {
+    text-align: center;
+  }
+}
+
 /* ABOUT US SECTION STYLING */
 #about {
+  --about-padding: 2em;
+  --about-image-size: 250px;
+
+  .row {
+    --gridgap: 0;
+  }
+
   .about-card {
+    padding: 2em 2em 2em 0em;
+    position: relative;
+  }
+
+  .about-card::after {
+    content: "";
     background-color: #DEE5F1;
-    padding: 2em;
-    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: calc(100% - calc(var(--about-image-size) / 2) - var(--about-padding));
+    height: 100%;
+    box-shadow: 5px 10px 20px -10px rgba(0,0,0,0.2);
+    z-index: -1;
+
+    @media (width < 768px) {
+      width: 100%;
+    }
   }
   
   .subsection-title {
     text-align: left;
-  }
-  
-  .subsection-title::after {
-    margin-inline: 0;
+    font-size: 2em;
+    font-weight: 200px;
+    margin: 0 0;
   }
 
   img {
     border-radius: 50%;
     aspect-ratio: 1;
     object-fit: cover;
-    width: 250px;
-    height: 250px;
+    width: var(--about-image-size);
+    height: var(--about-image-size);
+    min-width: var(--about-image-size);
+    flex-shrink: 0;
+    border-color: var(--cruzin-beige);
+    border-style: solid;
+    border-width: 15px;
   }
 
   p {
     text-align: left;
-    margin-inline: auto;
-    font-size: 0.9em;
+    margin-inline: 0;
+    font-size: 0.7em;
+    max-width: none;
+    letter-spacing: 0.1em;;
   }
 
-    .about-socials {
+  .about-text {
+    padding: 0em 1em 0em 2em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top:1.5em;
-    margin-top: 1.5em;
   }
 
   a {
@@ -834,12 +876,34 @@ section {
 
 /* SUBMISSIONS SECTION STYLING */
 #submissions {
-  .submissions-card {
-    background-color: #FCE8EF;
-    padding: 2em;
-    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+  --submission-padding: 2em;
+  --submission-image-size: 250px;
+
+  .row {
+    --gridgap: 0;
   }
- 
+
+  .submissions-card {
+    padding: var(--submission-padding);
+    position: relative;
+  }
+
+  .submissions-card::after {
+    content: "";
+    background-color: #FCE8EF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - calc(var(--submission-image-size) / 2) - var(--submission-padding));
+    height: 100%;
+    box-shadow: -10px 10px 20px -5px rgba(0,0,0,0.2);
+    z-index: -1;
+
+    @media (width < 768px) {
+      width: 100%;
+    }
+  }
+
   .submissions-text {
     display: flex;
     flex-direction: column;
@@ -850,12 +914,18 @@ section {
  
   .submissions-image {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
   }
  
+  @media (width < 768px) {
+    .submissions-image {
+      justify-content: center;
+    }
+  }
+
   .subsection-title {
     text-align: center;
+    font-size: 2em;
   }
  
   .subsection-title::after {
@@ -878,15 +948,18 @@ section {
  
   h3 {
     color: white;
+    font-weight: 400;
   }
 
   img {
     border-radius: 50%;
     object-fit: cover;
-    width: 250px;
-    height: 250px;
-    max-width: 250px;
+    width: var(--submission-image-size);
+    height: var(--submission-image-size);
+    max-width: var(--submission-image-size);
     flex-shrink: 0;
-    margin-right: -4em;
+    border-color: var(--cruzin-beige);
+    border-style: solid;
+    border-width: 15px;
   }
 }
