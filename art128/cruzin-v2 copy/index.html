@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cruzin'</title>
+  <meta name="description" content="SiteBase2: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- VIEWPORT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MAIN CSS FILE -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="site-header toggle-nav" id="home">
+    <div class="site-logo">
+      <h1><a href="index.html">
+        <img src="img/logo.png" alt="cruzin logo">
+        Cruzin'
+      </a></h1>
+    </div>
+
+    <nav class="site-nav" data-nav-state="closed">
+      <button class="menu-button burger">
+        <span>Menu</span>
+      </button>
+      <ul>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#submissions">Submissions</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="site-main">
+    
+    <section id="recipes">
+      
+      <h1>Spotlight</h1>
+
+      <div class="row">
+
+        <div class="recipe-card one-third">
+          <img src="img/german_pancake.png" alt="german pancake">
+          <div class="recipe-description">
+            <div class="recipe-country">
+              <p>Germany</p>
+            </div>
+
+            <div class="recipe-title-row">
+              <h3>German Pancake</h3>
+              <span class="comment-count">
+                <i class="material-icons">comment</i>
+                <p>127</p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card one-third">
+          <img src="img/cherry_karpatka.png" alt="cherry karpatka">
+          <div class="recipe-description">
+            <div class="recipe-country">
+              <p>Poland</p>
+            </div>
+
+            <div class="recipe-title-row">
+              <h3>Cherry Karpatka</h3>
+              <span class="comment-count">
+                <i class="material-icons">comment</i>
+                <p>345</p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card one-third">
+          <img src="img/chicken_curry.png" alt="coconut chicken curry">
+          <div class="recipe-description">
+            <div class="recipe-country">
+              <p>India</p>
+            </div>
+            
+            <div class="recipe-title-row">
+              <h3>Coconut Chicken Curry</h3>
+              <span class="comment-count">
+                <i class="material-icons">comment</i>
+                <p>211</p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <ul>
+        <li>Cherry Karpatka</li>
+        <li>Coconut Chicken Curry</li>
+        <li>Berry French Toast</li>
+      </ul> -->
+
+    </section>
+
+    <section class="destination">
+      <div class="container"> 
+
+        <h2 class="subsection-title">Find Your Next Destination</h2>
+        
+        <div class="row">
+          <div class="one-third">
+            <a href="#">
+              <img src="img/north_america.png" alt="North America">
+            </a>
+          </div>
+          <div class="one-third">
+            <a href="#">
+              <img src="img/south_america.png" alt="South America">
+              </a>
+          </div>
+          <div class="one-third">
+            <a href="#">
+              <img src="img/asia.png" alt="Asia">
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third">
+            <a href="#">
+              <img src="img/europe.png" alt="Europe">
+            </a>
+          </div>
+          <div class="one-third">
+            <a href="#">
+              <img src="img/australia.png" alt="Australia">
+            </a>
+          </div>
+          <div class="one-third">
+            <a href="#">
+              <img src="img/africa.png" alt="Africa">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="skill">
+              <h2 class="subsection-title">Choose Your Skill Level</h2>
+      <div class="container">
+
+
+        <div class="star-row">
+          <a href=""><img src="img/star.png" alt="star"></a>
+          <a href=""><img src="img/star.png" alt="star"></a>
+          <a href=""><img src="img/star.png" alt="star"></a>
+          <a href=""><img src="img/star.png" alt="star"></a>
+          <a href=""><img src="img/star.png" alt="star"></a>
+        </div>
+      </div>
+      <img src="img/airplane.png" alt="airplane" class="airplane">
+    </section>
+
+    <section class="ingredients">
+      <div class="container">
+
+        <h2 class="subsection-title">Pick Your Ingredients</h2>
+
+        <div class="ingredients-grid">
+          <img src="img/vegetables.png" alt="Vegetables" class="ing-vegetables horizontal">
+          <img src="img/fruit.png" alt="Fruit" class="ing-fruit vertical">
+          <img src="img/seafood.png" alt="Seafood" class="ing-seafood vertical">
+          <img src="img/dairy.png" alt="Dairy" class="ing-dairy vertical">
+          <img src="img/meat.png" alt="Meat" class="ing-meat meat">
+          <img src="img/carbs.png" alt="Rice, Grain, and Pasta" class="ing-carbs horizontal">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="find">
+      
+      <h2 class="subsection-title">Find Your Recipe</h2>
+
+      <div class="boarding">
+        <a href="">
+          <img src="img/boarding.png" alt="Ready for Boarding?">
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container-narrow">
+        <div class="about-card">
+
+          <div class="row">
+            <div class="one-third about-image">
+              <img src="img/friends.jpg" alt="Cruzin Team">
+
+            </div>
+            <div class="two-thirds about-text">
+              <h2 class="subsection-title">About Us</h2>
+              <p>Cruzin’ was formed by a small group of friends brought together by a shared love of food and the stories behind it. Today, we gather recipes through our own journeys and research, while also welcoming submissions from home cooks, chefs, and storytellers everywhere.</p>
+              <p>Our goal is to create a space where flavors, traditions, and voices from across the globe can be shared, explored, and remembered—one recipe at a time.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="submissions">
+      <div class="container-narrow">
+        <div class="submissions-card">
+          <div class="row">
+            <div class="two-thirds submissions-text">
+              <h2 class="subsection-title">Submit Your Recipes</h2>
+              <a href="#" class="button"><h3>Email us at cruzin@gmail.com</h3></a>
+            </div>
+
+            <div class="one-third submissions-image">
+              <img src="img/meringue.jpg" alt="Submit your recipes">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="site-logo">
+      <h1><a href="index.html">
+        <img src="img/logo.png" alt="cruzin logo">
+        Cruzin'</a></h1>
+    </div>
+
+    <nav class="site-nav" data-nav-state="closed">
+      <button class="menu-button burger">
+        <span>Menu</span>
+      </button>
+      <ul>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#submissions">Submissions</a></li>
+      </ul>
+    </nav>
+
+    
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
