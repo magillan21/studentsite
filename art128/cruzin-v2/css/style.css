@@ -879,13 +879,13 @@ section {
   }
 
   .horizontal {
-    height: 200px;
+    height: 150px;
     width: auto;
     object-fit: contain;
   }
 
   .vertical {
-    width: 250px;
+    width: 200px;
     height: auto;
     object-fit: contain;
   }
@@ -927,9 +927,35 @@ section {
 
 /* FIND YOUR RECIPE SECTION STYLING */
 .find {
-  h3 {
+  position: relative;
+
+  .subsection-title {
     text-align: center;
+    padding-bottom: 2em;
   }
+
+  img {
+    width: auto;
+    max-height: 500px;
+    padding-right: 4em;
+  }
+}
+
+.find::after {
+  content: "";
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 90%;
+  height: 25vw;
+  background: linear-gradient(
+    to bottom,
+    var(--cruzin-red) 50%,
+    var(--cruzin-beige) 50%
+  );
+  background-size: 100% calc(25vw / 3);
+  z-index: -1;
 }
 
 /* ABOUT US SECTION STYLING */
