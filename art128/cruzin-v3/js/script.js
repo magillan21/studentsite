@@ -71,19 +71,22 @@ gsap.from('.airplane', {
   immediateRender: false,
 });
 
-// HEADER
-const headerTl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.6 } });
- 
-headerTl
-  .from('.site-logo', {
-    x: -60,
-    opacity: 0,
-  })
-  .from('.site-nav ul li', {
-    y: -20,
-    opacity: 0,
-    stagger: 0.12,
-  }, '-=0.3');
+// HEADER ANIMATION — desktop only
+if (window.innerWidth >= 768) {
+  const headerTl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.6 } });
+
+  headerTl
+    .from('.site-logo', {
+      x: -60,
+      opacity: 0,
+    })
+    .from('.site-nav', {
+      y: -20,
+      opacity: 0,
+      duration: 0.6,
+      clearProps: 'all',
+    }, '-=0.3');
+}
  
 // FOOTER
 gsap.from('.site-footer', {
