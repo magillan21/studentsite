@@ -9,20 +9,6 @@ if (menuButton) {
   });
 }
 
-// FADE UP ON SCROLL
-const fadeElements = document.querySelectorAll('.fade-up');
-
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-fadeElements.forEach(el => fadeObserver.observe(el));
-
 // GSAP 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,19 +30,97 @@ gsap.utils.toArray('.stamp').forEach((stamp, i) => {
     }
   });
 
-  // PARALLAX
-  const speeds = [-25, -40, -15, -50, -20, -35, -10];
-  const speed = speeds[i % speeds.length];
+});
 
-  gsap.to(stamp, {
-    y: speed,
-    ease: 'none',
+// RECIPE CARDS STAGGER
+gsap.from('.recipe-card', {
+  scrollTrigger: {
+    trigger: '#recipes .row',
+    start: 'top 80%',
+  },
+  y: 40,
+  opacity: 0,
+  duration: 0.6,
+  ease: 'power2.out',
+  stagger: 0.15,
+  clearProps: 'transform',
+});
+
+// PASSPORT STAGGER
+gsap.from('.destination .one-third', {
+  scrollTrigger: {
+    trigger: '.destination .row',
+    start: 'top 80%',
+  },
+  y: 40,
+  opacity: 0,
+  duration: 0.6,
+  ease: 'power2.out',
+  stagger: 0.1,
+});
+
+// AIRPLANE DRIFT IN
+gsap.from('.airplane', {
+  scrollTrigger: {
+    trigger: '.skill',
+    start: 'top 80%',
+  },
+  xPercent: -150,
+  duration: 1.5,
+  ease: 'power2.out',
+  immediateRender: false,
+});
+
+// HEADER
+const headerTl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.6 } });
+ 
+headerTl
+  .from('.site-logo', {
+    x: -60,
+    opacity: 0,
+  })
+  .from('.site-nav ul li', {
+    y: -20,
+    opacity: 0,
+    stagger: 0.12,
+  }, '-=0.3');
+ 
+// FOOTER
+gsap.from('.site-footer', {
+  scrollTrigger: {
+    trigger: '.site-footer',
+    start: 'top 90%',
+  },
+  y: 40,
+  opacity: 0,
+  duration: 0.8,
+  ease: 'power2.out',
+});
+
+// INGREDIENTS
+gsap.from('.ingredients-grid img', {
+  scrollTrigger: {
+    trigger: '.ingredients-grid',
+    start: 'top 80%',
+  },
+  y: -60,
+  opacity: 0,
+  duration: 0.5,
+  ease: 'bounce.out',
+  stagger: 0.15,
+  clearProps: 'transform',
+});
+
+gsap.utils.toArray('.subsection-title').forEach(title => {
+  if (title.closest('#about') || title.closest('#submissions')) return;
+  gsap.from(title, {
     scrollTrigger: {
-      trigger: stamp.closest('section'),
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: 1.5,
-    }
+      trigger: title,
+      start: 'top 85%',
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.7,
+    ease: 'power2.out',
   });
-
 });
