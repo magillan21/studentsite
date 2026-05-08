@@ -871,8 +871,8 @@ section {
 
 /* INGREDIENTS SECTION STYLING  */
 .ingredients {
-  background-color: var(--cruzin-blue);
   margin-top: 10em;
+  position: relative;
 
   .subsection-title {
     padding-bottom: 2em;
@@ -896,6 +896,16 @@ section {
     align-self: end;
     padding-bottom: 1em;
   }
+}
+
+.ingredients::after {
+  content: "";
+  background-color: var(--cruzin-blue);
+  position: absolute;
+  top: 25%;
+  width: 100%; /* adjust to taste */
+  height: 60%;
+  z-index: -1;
 }
 
 .ingredients-grid {
